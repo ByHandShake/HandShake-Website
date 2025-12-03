@@ -17,20 +17,19 @@ export function PricingCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <button className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
-              Start 14-Day Free Trial
+            <a href="https://app.byhandshake.com/signup" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
+              Start Scaling
               <Icon icon="mdi:arrow-right" className="transition-transform group-hover:translate-x-1" />
-            </button>
-            <button className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)] uppercase tracking-wide">
-              <Icon icon="mdi:email" className="w-4 h-4" />
-              Contact Sales
-            </button>
+            </a>
+            <a href="/pricing" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)] uppercase tracking-wide">
+              View Pricing
+            </a>
           </div>
 
           <div className="flex items-center justify-center gap-8 text-sm text-gray-500 font-geist flex-wrap">
             <div className="flex items-center gap-2">
               <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
-              <span>No credit card required</span>
+              <span>30-day money-back guarantee</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
@@ -38,7 +37,7 @@ export function PricingCTA() {
             </div>
             <div className="flex items-center gap-2">
               <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
-              <span>30-day money-back</span>
+              <span>Dedicated IP included</span>
             </div>
           </div>
         </div>

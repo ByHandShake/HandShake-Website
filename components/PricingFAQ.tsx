@@ -5,9 +5,9 @@ import { Icon } from '@iconify/react'
 
 const faqs = [
   {
-    question: 'How does the 14-day free trial work?',
+    question: 'How does the 30-day money-back guarantee work?',
     answer:
-      'Start with any plan without entering a credit card. You get full access to all features for 14 days. After the trial, you can choose to upgrade to a paid plan or continue with limited features on our free tier.',
+      'We offer a 30-day money-back guarantee on all plans. If you\'re not satisfied with Handshake within the first 30 days, contact our support team for a full refund—no questions asked.',
   },
   {
     question: 'Can I switch plans at any time?',

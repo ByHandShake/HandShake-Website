@@ -296,7 +296,8 @@ export function PricingPlans() {
                   ))}
                 </ul>
 
-                <button
+                <a
+                  href={plan.premium ? '/contact' : 'https://app.byhandshake.com/signup'}
                   className={`w-full inline-flex text-sm font-semibold rounded-full px-8 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist uppercase tracking-wide group/btn mt-auto ${
                     plan.premium
                       ? 'bg-gradient-to-tr from-purple-500 via-purple-600 to-indigo-600 shadow-[0_4px_15px_rgba(168,85,247,0.4)] hover:shadow-[0_8px_25px_rgba(168,85,247,0.8)] hover:scale-[1.02]'
@@ -314,15 +315,13 @@ export function PricingPlans() {
                     </>
                   ) : plan.highlight ? (
                     <>
-                      Start 14-Day Trial
+                      Start Scaling
                       <Icon icon="mdi:arrow-right" className="ml-2 transition-transform group-hover/btn:translate-x-1" />
                     </>
-                  ) : plan.popular ? (
-                    'Start Free Trial'
                   ) : (
-                    'Get Started'
+                    'Start Scaling'
                   )}
-                </button>
+                </a>
               </div>
             </div>
           ))}

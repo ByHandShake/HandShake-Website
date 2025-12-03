@@ -2,16 +2,25 @@
 
 import { useSpotlight } from '@/lib/hooks/useSpotlight'
 import { Icon } from '@iconify/react'
+import Image from 'next/image'
 
-const integrations = [
-  { name: 'HubSpot', icon: 'mdi:hubspot', color: 'from-orange-500 to-orange-600' },
-  { name: 'Salesforce', icon: 'mdi:salesforce', color: 'from-blue-400 to-blue-500' },
-  { name: 'Pipedrive', icon: 'mdi:pipedrive', color: 'from-emerald-500 to-emerald-600' },
-  { name: 'Slack', icon: 'mdi:slack', color: 'from-purple-500 to-purple-600' },
-  { name: 'Zapier', icon: 'mdi:lightning-bolt', color: 'from-orange-400 to-orange-500' },
-  { name: 'Google Sheets', icon: 'mdi:google-spreadsheet', color: 'from-green-500 to-green-600' },
-  { name: 'Microsoft', icon: 'mdi:microsoft', color: 'from-blue-500 to-cyan-500' },
-  { name: 'Airtable', icon: 'mdi:table', color: 'from-yellow-500 to-amber-500' },
+type ImageIntegration = { name: string; image: string }
+type IconIntegration = { name: string; icon: string; color: string }
+type Integration = ImageIntegration | IconIntegration
+
+const integrations: Integration[] = [
+  { name: 'Clay', image: '/logos/clay.svg' },
+  { name: 'n8n', icon: 'simple-icons:n8n', color: '#EA4B71' },
+  { name: 'Instantly', image: '/logos/instantly.svg' },
+  { name: 'RB2B', image: '/logos/rb2b.svg' },
+  { name: 'Zapier', icon: 'simple-icons:zapier', color: '#FF4A00' },
+  { name: 'Make', icon: 'simple-icons:make', color: '#6D00CC' },
+  { name: 'Slack', icon: 'simple-icons:slack', color: '#4A154B' },
+  { name: 'HubSpot', icon: 'simple-icons:hubspot', color: '#FF7A59' },
+  { name: 'Go High Level', image: '/logos/gohighlevel.svg' },
+  { name: 'Pipedrive', image: '/logos/pipedrive.svg' },
+  { name: 'Close', image: '/logos/close.svg' },
+  { name: 'Weezly', image: '/logos/weezly.svg' },
 ]
 
 export function FeaturesIntegrations() {
@@ -65,30 +74,46 @@ export function FeaturesIntegrations() {
 
           <div className="relative z-10">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
-              {integrations.map((integration, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center p-6 bg-black/30 border border-white/5 rounded-2xl hover:border-white/10 hover:scale-105 transition-all duration-300 group/int"
-                >
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${integration.color} flex items-center justify-center mb-3 shadow-lg group-hover/int:scale-110 transition-transform duration-300`}>
-                    <Icon icon={integration.icon} className="w-8 h-8 text-white" />
+              {integrations.map((integration, idx) => {
+                const isImage = 'image' in integration
+                return (
+                  <div
+                    key={idx}
+                    className="flex flex-col items-center justify-center p-6 bg-black/30 border border-white/5 rounded-2xl hover:border-white/10 hover:scale-105 transition-all duration-300 group/int"
+                  >
+                    <div 
+                      className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-3 shadow-lg group-hover/int:scale-110 transition-transform duration-300 overflow-hidden"
+                    >
+                      {isImage ? (
+                        <Image 
+                          src={(integration as ImageIntegration).image} 
+                          alt={integration.name}
+                          width={40}
+                          height={40}
+                          className="w-10 h-10 object-contain"
+                        />
+                      ) : (
+                        <Icon 
+                          icon={(integration as IconIntegration).icon} 
+                          className="w-8 h-8" 
+                          style={{ color: (integration as IconIntegration).color }}
+                        />
+                      )}
+                    </div>
+                    <span className="text-sm font-medium text-gray-300 font-geist">{integration.name}</span>
                   </div>
-                  <span className="text-sm font-medium text-gray-300 font-geist">{integration.name}</span>
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             <div className="text-center">
               <p className="text-gray-400 font-geist mb-6">
                 Plus hundreds more through Zapier, webhooks, and our REST API
               </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold font-geist transition-colors"
-              >
-                View All Integrations
-                <Icon icon="mdi:arrow-right" className="w-4 h-4" />
-              </a>
+              <span className="inline-flex items-center gap-2 text-blue-400 font-semibold font-geist">
+                <Icon icon="mdi:clock-outline" className="w-4 h-4" />
+                Integrations coming soon
+              </span>
             </div>
           </div>
         </div>
@@ -103,13 +128,10 @@ export function FeaturesIntegrations() {
             <p className="text-gray-400 font-geist text-sm mb-4">
               Build custom integrations with our comprehensive REST API. Full documentation and SDKs available.
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold font-geist text-sm transition-colors"
-            >
-              API Documentation
-              <Icon icon="mdi:arrow-right" className="w-4 h-4" />
-            </a>
+            <span className="inline-flex items-center gap-2 text-blue-400/60 font-semibold font-geist text-sm">
+              <Icon icon="mdi:clock-outline" className="w-4 h-4" />
+              Coming soon
+            </span>
           </div>
 
           <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-colors">
@@ -120,13 +142,10 @@ export function FeaturesIntegrations() {
             <p className="text-gray-400 font-geist text-sm mb-4">
               Get real-time notifications for campaign events, new messages, and more with custom webhooks.
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold font-geist text-sm transition-colors"
-            >
-              Webhook Guide
-              <Icon icon="mdi:arrow-right" className="w-4 h-4" />
-            </a>
+            <span className="inline-flex items-center gap-2 text-purple-400/60 font-semibold font-geist text-sm">
+              <Icon icon="mdi:clock-outline" className="w-4 h-4" />
+              Coming soon
+            </span>
           </div>
         </div>
       </div>

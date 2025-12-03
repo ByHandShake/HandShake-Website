@@ -51,11 +51,14 @@ export function Navbar() {
         </div>
 
         <div className="relative flex items-center gap-2 shrink-0">
-          <button className="group relative inline-flex items-center justify-center gap-1 sm:gap-1.5 overflow-hidden rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 text-[11px] sm:text-xs md:text-sm font-semibold shadow-[0_2px_10px_rgba(0,123,255,0.3)] sm:shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 hover:bg-gradient-to-tr hover:from-blue-300 hover:via-blue-500 hover:to-blue-700 active:shadow-inner active:shadow-blue-900/50 active:scale-[0.98] active:duration-75">
-            <span className="relative z-10 font-geist hidden md:inline">Start Free Trial</span>
-            <span className="relative z-10 font-geist md:hidden">Start Trial</span>
+          <a href="https://app.byhandshake.com/login" className="hidden sm:inline-flex items-center justify-center px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-[11px] sm:text-xs md:text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-300 font-geist">
+            Login
+          </a>
+          <a href="https://app.byhandshake.com/signup" className="group relative inline-flex items-center justify-center gap-1 sm:gap-1.5 overflow-hidden rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 text-[11px] sm:text-xs md:text-sm font-semibold shadow-[0_2px_10px_rgba(0,123,255,0.3)] sm:shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 hover:bg-gradient-to-tr hover:from-blue-300 hover:via-blue-500 hover:to-blue-700 active:shadow-inner active:shadow-blue-900/50 active:scale-[0.98] active:duration-75">
+            <span className="relative z-10 font-geist hidden md:inline">Start Scaling</span>
+            <span className="relative z-10 font-geist md:hidden">Start</span>
             <Icon icon="solar:arrow-right-up-bold-duotone" className="relative z-10 group-hover:translate-x-0.5 transition-transform duration-300 w-3.5 h-3.5 sm:w-4 sm:h-4" />
-          </button>
+          </a>
         </div>
       </div>
     </nav>

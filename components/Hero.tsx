@@ -25,16 +25,16 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="inline-flex sm:w-auto transition-all duration-300 hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] hover:bg-gradient-to-tr hover:from-blue-300 hover:via-blue-500 hover:to-blue-700 active:shadow-inner active:shadow-blue-900/50 active:scale-[0.98] active:duration-75 text-sm font-semibold text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 w-full rounded-full pt-3.5 pr-8 pb-3.5 pl-8 shadow-[0_4px_15px_rgba(0,123,255,0.4)] items-center justify-center">
-              Start Free Trial
-            </button>
-            <button className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)] focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-blue-950">
-              See How It Works
-            </button>
+            <a href="https://app.byhandshake.com/signup" className="inline-flex sm:w-auto transition-all duration-300 hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] hover:bg-gradient-to-tr hover:from-blue-300 hover:via-blue-500 hover:to-blue-700 active:shadow-inner active:shadow-blue-900/50 active:scale-[0.98] active:duration-75 text-sm font-semibold text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 w-full rounded-full pt-3.5 pr-8 pb-3.5 pl-8 shadow-[0_4px_15px_rgba(0,123,255,0.4)] items-center justify-center">
+              Start Scaling
+            </a>
+            <a href="#pricing" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)] focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-blue-950">
+              View Pricing
+            </a>
           </div>
           
           <p className="text-xs text-gray-500 mt-6 font-medium font-geist tracking-wide">
-            No credit card required • 14-day free trial • Cloud-based safety
+            30-day money-back guarantee • Cancel anytime • Dedicated IP included
           </p>
         </div>
       </div>

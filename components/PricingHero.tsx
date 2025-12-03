@@ -19,11 +19,11 @@ export function PricingHero() {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-geist text-gray-400 px-4">
-            Start building for free, then scale as you grow. Upgrade, downgrade, or cancel at any time with no hidden fees.
+            Choose the plan that fits your scale. Upgrade, downgrade, or cancel at any time with no hidden fees.
           </p>
 
           <p className="text-xs sm:text-sm text-gray-500 font-medium font-geist tracking-wide">
-            All plans include 14-day free trial • No credit card required
+            30-day money-back guarantee • Cancel anytime • Dedicated IP included
           </p>
         </div>
       </div>

@@ -7,13 +7,13 @@ const plans = [
   {
     name: 'Solo',
     price: 99,
-    senders: '1',
+    senders: '2',
     tagline: 'Perfect for the individual founder',
     color: 'emerald',
-    teamSeats: '1',
+    teamSeats: 'Unlimited',
+    workspaces: 'Unlimited',
     unifiedInbox: true,
-    dedicatedIP: false,
-    prioritySupport: false,
+    premiumProxy: true,
   },
   {
     name: 'Growth',
@@ -21,10 +21,10 @@ const plans = [
     senders: '5',
     tagline: 'For small teams ramping up',
     color: 'blue',
-    teamSeats: '3',
+    teamSeats: 'Unlimited',
+    workspaces: 'Unlimited',
     unifiedInbox: true,
-    dedicatedIP: true,
-    prioritySupport: false,
+    premiumProxy: true,
     popular: true,
   },
   {
@@ -33,10 +33,10 @@ const plans = [
     senders: '10',
     tagline: 'For established sales teams',
     color: 'purple',
-    teamSeats: '5',
+    teamSeats: 'Unlimited',
+    workspaces: 'Unlimited',
     unifiedInbox: true,
-    dedicatedIP: true,
-    prioritySupport: true,
+    premiumProxy: true,
   },
   {
     name: 'Agency',
@@ -44,10 +44,10 @@ const plans = [
     senders: '20',
     tagline: 'The entry point for lead gen shops',
     color: 'indigo',
-    teamSeats: '10',
+    teamSeats: 'Unlimited',
+    workspaces: 'Unlimited',
     unifiedInbox: true,
-    dedicatedIP: true,
-    prioritySupport: true,
+    premiumProxy: true,
   },
 ]
 
@@ -69,7 +69,7 @@ export function PricingTable() {
             <span className="text-blue-500 font-jakarta font-medium"> every stage</span>
           </h2>
           <p className="text-lg mb-4 max-w-2xl mx-auto font-geist text-gray-400">
-            Start building for free, then scale as you grow. Upgrade, downgrade, or cancel at any time with no hidden fees.
+            Choose the plan that fits your scale. Upgrade, downgrade, or cancel at any time with no hidden fees.
           </p>
         </div>
 
@@ -121,34 +121,26 @@ export function PricingTable() {
                   <span className="text-white font-semibold font-geist">{plan.teamSeats}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-400 font-geist">Workspaces</span>
+                  <span className="text-white font-semibold font-geist">{plan.workspaces}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-400 font-geist">Unified Inbox</span>
                   <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 font-geist">Dedicated IP Pool</span>
-                  {plan.dedicatedIP ? (
-                    <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : 'text-indigo-500'}`} />
-                  ) : (
-                    <Icon icon="mdi:close" className="text-gray-700 w-5 h-5" />
-                  )}
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 font-geist">Priority Support</span>
-                  {plan.prioritySupport ? (
-                    <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : 'text-indigo-500'}`} />
-                  ) : (
-                    <Icon icon="mdi:close" className="text-gray-700 w-5 h-5" />
-                  )}
+                  <span className="text-gray-400 font-geist">Premium Handshake Proxy</span>
+                  <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
               </div>
 
-              <button className={`w-full inline-flex text-sm font-semibold rounded-full px-8 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist uppercase tracking-wide ${
+              <a href="https://app.byhandshake.com/signup" className={`w-full inline-flex text-sm font-semibold rounded-full px-8 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist uppercase tracking-wide ${
                 plan.popular 
                   ? 'bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02]'
                   : 'bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)]'
               }`}>
-                {plan.popular ? 'Start Trial' : 'Get Started'}
-              </button>
+                Start Scaling
+              </a>
             </div>
           ))}
         </div>
@@ -183,7 +175,10 @@ export function PricingTable() {
           <div className="min-w-[1000px] grid grid-cols-5 divide-x divide-white/5 z-10 text-sm relative">
             {/* Feature Labels Column */}
             <div className="flex flex-col bg-gradient-to-br from-white/10 to-white/0">
-              <div className="flex flex-col border-white/5 border-b pt-12 pr-6 pb-10 pl-6 justify-center">
+              {/* Empty header to match plan name bar */}
+              <div className="h-10 border-b border-white/5" />
+              {/* Header to match plan price section */}
+              <div className="flex flex-col border-white/5 border-b px-6 py-6 justify-center min-h-[160px]">
                 <h3 className="text-2xl font-semibold text-white tracking-tight font-jakarta">
                   Compare <span className="text-gray-500">Plans</span>
                 </h3>
@@ -192,9 +187,9 @@ export function PricingTable() {
 
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Senders Included</div>
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Team Seats</div>
+              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Workspaces</div>
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Unified Inbox</div>
-              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Dedicated IP Pool</div>
-              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Priority Support</div>
+              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Premium Handshake Proxy</div>
               <div className="h-24 px-6 flex items-center border-b border-white/5" />
             </div>
 
@@ -224,33 +219,25 @@ export function PricingTable() {
                   {plan.senders} {plan.senders === '1' ? 'Sender' : 'Senders'}
                 </div>
                 <div className={`flex items-center justify-center border-b font-medium font-geist py-4 h-[4rem] border-white/5 ${plan.popular ? 'text-white font-bold relative z-10' : 'text-gray-200'}`}>
-                  {plan.teamSeats} {plan.teamSeats === '1' ? 'Seat' : 'Seats'}
+                  {plan.teamSeats}
+                </div>
+                <div className={`flex items-center justify-center border-b font-medium font-geist py-4 h-[4rem] border-white/5 ${plan.popular ? 'text-white font-bold relative z-10' : 'text-gray-200'}`}>
+                  {plan.workspaces}
                 </div>
                 <div className={`flex items-center justify-center border-b py-4 h-[4rem] border-white/5 ${plan.popular ? 'relative z-10' : ''}`}>
                   <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
                 <div className={`flex items-center justify-center border-b py-4 h-[4rem] border-white/5 ${plan.popular ? 'relative z-10' : ''}`}>
-                  {plan.dedicatedIP ? (
-                    <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : 'text-indigo-500'}`} />
-                  ) : (
-                    <Icon icon="mdi:close" className="text-gray-700 w-5 h-5" />
-                  )}
-                </div>
-                <div className={`flex items-center justify-center border-b py-4 h-[4rem] border-white/5 ${plan.popular ? 'relative z-10' : ''}`}>
-                  {plan.prioritySupport ? (
-                    <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : 'text-indigo-500'}`} />
-                  ) : (
-                    <Icon icon="mdi:close" className="text-gray-700 w-5 h-5" />
-                  )}
+                  <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
                 <div className={`h-24 p-4 flex items-center justify-center border-b border-white/5 ${plan.popular ? 'relative z-10' : ''}`}>
-                  <button className={`w-full inline-flex text-sm font-semibold rounded-full px-6 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist uppercase tracking-wide ${
+                  <a href="https://app.byhandshake.com/signup" className={`w-full inline-flex text-sm font-semibold rounded-full px-6 py-3.5 items-center justify-center transition-all duration-300 text-white font-geist uppercase tracking-wide ${
                     plan.popular 
                       ? 'bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02]'
                       : 'bg-blue-950 border border-blue-600 shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:border-blue-300 hover:shadow-[0_0_40px_rgba(0,123,255,0.8)]'
                   }`}>
-                    {plan.popular ? 'Start Trial' : 'Get Started'}
-                  </button>
+                    Start Scaling
+                  </a>
                 </div>
               </div>
             ))}
@@ -258,7 +245,7 @@ export function PricingTable() {
         </div>
 
         {/* Premium Plans Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
           {/* Scale Plan */}
           <div
             className="group spotlight-card overflow-hidden relative bg-gradient-to-br from-[#0F0F11] to-[#000000] border border-blue-500/30 rounded-[32px] p-10 shadow-[0_0_60px_rgba(59,130,246,0.3)] hover:shadow-[0_0_80px_rgba(59,130,246,0.5)] transition-all duration-500 [animation:fadeSlideIn_0.8s_ease-out_0.4s_both] animate-on-scroll flex flex-col"
@@ -319,18 +306,14 @@ export function PricingTable() {
                 </li>
                 <li className="flex items-center gap-3 text-gray-200 font-geist">
                   <Icon icon="mdi:check-circle" className="w-5 h-5 text-blue-500 shrink-0" />
-                  <span>Dedicated IP Pool</span>
-                </li>
-                <li className="flex items-center gap-3 text-gray-200 font-geist">
-                  <Icon icon="mdi:check-circle" className="w-5 h-5 text-blue-500 shrink-0" />
-                  <span>Priority Support & SLA</span>
+                  <span>Premium Handshake Proxy</span>
                 </li>
               </ul>
 
-              <button className="w-full inline-flex text-sm font-semibold rounded-full px-8 py-4 items-center justify-center transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group/btn mt-auto">
-                <span>Start 14-Day Trial</span>
+              <a href="https://app.byhandshake.com/signup" className="w-full inline-flex text-sm font-semibold rounded-full px-8 py-4 items-center justify-center transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group/btn mt-auto">
+                <span>Start Scaling</span>
                 <Icon icon="mdi:arrow-right" className="ml-2 transition-transform group-hover/btn:translate-x-1" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -400,19 +383,7 @@ export function PricingTable() {
                 </li>
                 <li className="flex items-center gap-3 text-gray-200 font-geist">
                   <Icon icon="mdi:check-circle" className="w-5 h-5 text-purple-500 shrink-0" />
-                  <span>Dedicated IP Pool</span>
-                </li>
-                <li className="flex items-center gap-3 text-gray-200 font-geist">
-                  <Icon icon="mdi:check-circle" className="w-5 h-5 text-purple-500 shrink-0" />
-                  <span>Priority Support & SLA</span>
-                </li>
-                <li className="flex items-center gap-3 text-gray-200 font-geist">
-                  <Icon icon="mdi:check-circle" className="w-5 h-5 text-purple-500 shrink-0" />
-                  <span><strong className="text-white">White-label</strong> options</span>
-                </li>
-                <li className="flex items-center gap-3 text-gray-200 font-geist">
-                  <Icon icon="mdi:check-circle" className="w-5 h-5 text-purple-500 shrink-0" />
-                  <span><strong className="text-white">Dedicated</strong> account manager</span>
+                  <span>Premium Handshake Proxy</span>
                 </li>
               </ul>
 

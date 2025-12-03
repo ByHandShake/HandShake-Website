@@ -5,42 +5,39 @@ import { Icon } from '@iconify/react'
 
 const features = [
   {
+    category: 'Exclusive',
+    items: [
+      { name: 'LinkedIn & Email accounts', solo: '2', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
+      { name: 'Sender Profiles rotation', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Single Session Protection', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Unified senders dashboard', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Full historical communication sync', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+    ],
+  },
+  {
     category: 'Core Features',
     items: [
-      { name: 'LinkedIn Sender Accounts', solo: '1', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
-      { name: 'Team Seats', solo: '1', growth: '3', business: '5', agency: '10', scale: 'Unlimited', infinity: 'Unlimited' },
+      { name: 'Cloud LinkedIn automation', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Premium Handshake Proxy', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'A-Z Testing', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Data Import from LinkedIn and CSV', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'LinkedIn Chrome Extension', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'CRM with advanced filters', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+    ],
+  },
+  {
+    category: 'Coming Soon',
+    items: [
+      { name: 'Webhooks', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
+      { name: 'API', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
+    ],
+  },
+  {
+    category: 'Team & Workspaces',
+    items: [
+      { name: 'Team Seats', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
+      { name: 'Workspaces', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
       { name: 'Unified Inbox', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Campaign Templates', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Basic Analytics', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-    ],
-  },
-  {
-    category: 'Advanced Features',
-    items: [
-      { name: 'Dedicated IP Pool', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Advanced Analytics', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'A/B Testing', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Custom Integrations', solo: false, growth: false, business: true, agency: true, scale: true, infinity: true },
-      { name: 'API Access', solo: false, growth: false, business: false, agency: true, scale: true, infinity: true },
-      { name: 'White-label Options', solo: false, growth: false, business: false, agency: true, scale: false, infinity: true },
-    ],
-  },
-  {
-    category: 'Support & Success',
-    items: [
-      { name: 'Email Support', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Priority Support', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Support SLA', solo: false, growth: false, business: false, agency: true, scale: true, infinity: true },
-      { name: 'Dedicated Account Manager', solo: false, growth: false, business: false, agency: false, scale: true, infinity: true },
-      { name: 'Onboarding & Training', solo: false, growth: false, business: false, agency: false, scale: true, infinity: true },
-    ],
-  },
-  {
-    category: 'Enterprise',
-    items: [
-      { name: 'SSO & SAML', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
-      { name: 'Enterprise Security', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
-      { name: 'Custom Development', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
     ],
   },
 ]
@@ -178,15 +175,15 @@ export function PricingComparison() {
 
             <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors">
               <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
-                <Icon icon="mdi:account-group" className="w-6 h-6 text-purple-400" />
+                <Icon icon="mdi:shield-check" className="w-6 h-6 text-purple-400" />
               </div>
-              <h4 className="text-lg font-semibold text-white font-geist mb-2">Extra Team Seats</h4>
+              <h4 className="text-lg font-semibold text-white font-geist mb-2">Dedicated Proxy</h4>
               <p className="text-sm text-gray-400 font-geist mb-4">
-                Invite more team members to collaborate.
+                Get a dedicated residential proxy for enhanced security.
               </p>
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white font-jakarta">$10</span>
-                <span className="text-sm text-gray-500 font-geist">/seat/month</span>
+                <span className="text-2xl font-bold text-white font-jakarta">$25</span>
+                <span className="text-sm text-gray-500 font-geist">/sender/month</span>
               </div>
             </div>
 
