@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-[#02040a] border-t border-white/5 py-8 sm:py-12 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center cursor-pointer transition-transform hover:scale-105 relative">
               <Image 
@@ -38,33 +38,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors font-geist">
-                  Integrations
+                <a href="/templates" className="hover:text-blue-400 transition-colors font-geist">
+                  Templates
+                </a>
+              </li>
+              <li>
+                <a href="/affiliate" className="hover:text-blue-400 transition-colors font-geist">
+                  Affiliate
                 </a>
               </li>
             </ul>
           </div>
           
-          <div>
-            <h4 className="font-semibold text-white mb-3 sm:mb-4 font-geist text-xs sm:text-sm">Company</h4>
-            <ul className="space-y-1.5 sm:space-y-2 text-gray-500 text-xs sm:text-sm">
-              <li>
-                <a href="/about" className="hover:text-blue-400 transition-colors font-geist">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-blue-400 transition-colors font-geist">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors font-geist">
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </div>
           
           <div>
             <h4 className="font-semibold text-white mb-3 sm:mb-4 font-geist text-xs sm:text-sm">Legal</h4>

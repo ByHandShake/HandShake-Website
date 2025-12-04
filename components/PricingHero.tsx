@@ -23,7 +23,7 @@ export function PricingHero() {
           </p>
 
           <p className="text-xs sm:text-sm text-gray-500 font-medium font-geist tracking-wide">
-            30-day money-back guarantee • Cancel anytime • Dedicated IP included
+            30-day money-back guarantee • Cancel anytime • Premium Handshake proxies included
           </p>
         </div>
       </div>

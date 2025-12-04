@@ -224,20 +224,20 @@ export function CampaignFlowSection() {
                 <Icon icon="mdi:google" className="w-8 h-8 text-white" />
               </div>
               
-              <div className="absolute -left-4 bottom-20 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
-                <span className="text-xs font-bold text-white">API</span>
+              <div className="absolute -left-4 bottom-20 w-14 h-14 rounded-full bg-gradient-to-br from-[#6D00CC] to-[#9333EA] flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
+                <Icon icon="simple-icons:make" className="w-6 h-6 text-white" />
               </div>
 
               <div className="absolute -right-8 top-24 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
-                <Icon icon="mdi:pipedrive" className="w-6 h-6 text-white" />
+                <Icon icon="simple-icons:salesforce" className="w-7 h-7 text-white" />
               </div>
 
               <div className="absolute -right-6 bottom-32 w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
                 <Icon icon="mdi:slack" className="w-6 h-6 text-white" />
               </div>
 
-              <div className="absolute left-12 -bottom-6 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
-                <Icon icon="mdi:microsoft" className="w-6 h-6 text-white" />
+              <div className="absolute left-12 -bottom-6 w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">
+                <Icon icon="simple-icons:zapier" className="w-6 h-6 text-white" />
               </div>
 
               <div className="absolute right-16 -bottom-6 w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center shadow-lg opacity-60 hover:opacity-100 transition-opacity hidden lg:flex">

@@ -5,24 +5,31 @@ import { Icon } from '@iconify/react'
 
 const features = [
   {
-    category: 'Exclusive',
+    category: 'Accounts & Team',
     items: [
-      { name: 'LinkedIn & Email accounts', solo: '2', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
-      { name: 'Sender Profiles rotation', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Single Session Protection', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Unified senders dashboard', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Full historical communication sync', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'LinkedIn sender accounts', solo: '2', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
+      { name: 'Team Seats', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
+      { name: 'Workspaces', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
+      { name: 'Unified Inbox', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
     ],
   },
   {
     category: 'Core Features',
     items: [
-      { name: 'Cloud LinkedIn automation', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
       { name: 'Premium Handshake Proxy', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'A-Z Testing', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Data Import from LinkedIn and CSV', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'LinkedIn Chrome Extension', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'CRM with advanced filters', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Analytics', solo: 'Basic', growth: 'Advanced', business: 'Advanced', agency: 'Advanced', scale: 'Advanced', infinity: 'Advanced' },
+      { name: 'Support', solo: 'Email', growth: 'Priority', business: 'Priority', agency: 'Priority', scale: 'Priority', infinity: 'Priority' },
+      { name: 'Campaign templates', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'A/B testing', solo: false, growth: false, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Smart scheduling', solo: false, growth: false, business: false, agency: true, scale: true, infinity: true },
+      { name: 'Team collaboration tools', solo: false, growth: false, business: false, agency: false, scale: true, infinity: true },
+    ],
+  },
+  {
+    category: 'Enterprise',
+    items: [
+      { name: 'Enterprise security', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
+      { name: 'SSO & SAML', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
     ],
   },
   {
@@ -30,14 +37,6 @@ const features = [
     items: [
       { name: 'Webhooks', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
       { name: 'API', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
-    ],
-  },
-  {
-    category: 'Team & Workspaces',
-    items: [
-      { name: 'Team Seats', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
-      { name: 'Workspaces', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
-      { name: 'Unified Inbox', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
     ],
   },
 ]
@@ -150,56 +149,6 @@ export function PricingComparison() {
                 ))}
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Add-ons Section */}
-        <div className="mt-16 [animation:fadeSlideIn_0.8s_ease-out_0.3s_both] animate-on-scroll">
-          <h3 className="text-2xl sm:text-3xl font-medium text-white tracking-tight font-jakarta mb-8 text-center">
-            Add-ons & Extras
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4">
-                <Icon icon="mdi:account-plus" className="w-6 h-6 text-blue-400" />
-              </div>
-              <h4 className="text-lg font-semibold text-white font-geist mb-2">Extra Senders</h4>
-              <p className="text-sm text-gray-400 font-geist mb-4">
-                Need more LinkedIn accounts? Add them anytime.
-              </p>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white font-jakarta">$15</span>
-                <span className="text-sm text-gray-500 font-geist">/sender/month</span>
-              </div>
-            </div>
-
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
-                <Icon icon="mdi:shield-check" className="w-6 h-6 text-purple-400" />
-              </div>
-              <h4 className="text-lg font-semibold text-white font-geist mb-2">Dedicated Proxy</h4>
-              <p className="text-sm text-gray-400 font-geist mb-4">
-                Get a dedicated residential proxy for enhanced security.
-              </p>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white font-jakarta">$25</span>
-                <span className="text-sm text-gray-500 font-geist">/sender/month</span>
-              </div>
-            </div>
-
-            <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
-                <Icon icon="mdi:headset" className="w-6 h-6 text-emerald-400" />
-              </div>
-              <h4 className="text-lg font-semibold text-white font-geist mb-2">Premium Support</h4>
-              <p className="text-sm text-gray-400 font-geist mb-4">
-                Get priority support with faster response times.
-              </p>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white font-jakarta">$99</span>
-                <span className="text-sm text-gray-500 font-geist">/month</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

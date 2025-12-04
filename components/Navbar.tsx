@@ -40,14 +40,20 @@ export function Navbar() {
             Pricing
             <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-transparent transition-all duration-300 nav-indicator" />
           </Link>
-          <Link href="/about" className="nav-link relative px-2 xl:px-3 py-2 transition-colors duration-300 font-geist text-gray-300 hover:text-white">
-            About
+          <Link href="/affiliate" className="nav-link relative px-2 xl:px-3 py-2 transition-colors duration-300 font-geist text-gray-300 hover:text-white">
+            <span className="absolute -top-1 -left-0.5 inline-flex items-center justify-center w-[25px] h-[12px] rounded-full text-[8px] font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30 backdrop-blur-sm">Hot</span>
+            Affiliate
             <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-transparent transition-all duration-300 nav-indicator" />
           </Link>
-          <Link href="/contact" className="nav-link relative px-2 xl:px-3 py-2 transition-colors duration-300 font-geist text-gray-300 hover:text-white">
-            Contact
+          <Link href="/templates" className="nav-link relative px-2 xl:px-3 py-2 transition-colors duration-300 font-geist text-gray-300 hover:text-white">
+            <span className="absolute -top-1 -left-0.5 inline-flex items-center justify-center w-[25px] h-[12px] rounded-full text-[8px] font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30 backdrop-blur-sm">New</span>
+            Templates
             <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-transparent transition-all duration-300 nav-indicator" />
           </Link>
+          <a href="https://outbound.community/" target="_blank" rel="noopener noreferrer" className="nav-link relative px-2 xl:px-3 py-2 transition-colors duration-300 font-geist text-gray-300 hover:text-white">
+            Community
+            <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-transparent transition-all duration-300 nav-indicator" />
+          </a>
         </div>
 
         <div className="relative flex items-center gap-2 shrink-0">
