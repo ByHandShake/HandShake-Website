@@ -59,7 +59,7 @@ export function PricingTable() {
   const { handleMouseMove } = useSpotlight()
 
   return (
-    <section className="border-y bg-black border-white/5 pt-24 pb-24">
+    <section id="pricing" className="border-y bg-black border-white/5 pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col [animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll text-center mb-12 items-center">
           <div className="inline-flex gap-2 bg-blue-500/10 border-blue-500/20 border rounded-full mb-6 pt-1 pr-3 pb-1 pl-3 items-center">
@@ -133,7 +133,7 @@ export function PricingTable() {
                   <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 font-geist">Premium Handshake Proxy</span>
+                  <span className="text-gray-400 font-geist">Premium Handshake Proxies</span>
                   <Icon icon="mdi:check" className={`w-5 h-5 ${plan.color === 'blue' ? 'text-blue-500' : plan.color === 'purple' ? 'text-purple-500' : plan.color === 'emerald' ? 'text-emerald-500' : 'text-indigo-500'}`} />
                 </div>
               </div>
@@ -194,7 +194,7 @@ export function PricingTable() {
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Team Seats</div>
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Workspaces</div>
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Unified Inbox</div>
-              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Premium Handshake Proxy</div>
+              <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Premium Handshake Proxies</div>
               <div className="h-24 px-6 flex items-center border-b border-white/5" />
               <div className="h-12 px-6 flex items-center" />
             </div>
@@ -315,7 +315,7 @@ export function PricingTable() {
                 </li>
                 <li className="flex items-center gap-3 text-gray-200 font-geist">
                   <Icon icon="mdi:check-circle" className="w-5 h-5 text-blue-500 shrink-0" />
-                  <span>Premium Handshake Proxy</span>
+                  <span>Premium Handshake Proxies</span>
                 </li>
               </ul>
 
@@ -393,7 +393,7 @@ export function PricingTable() {
                 </li>
                 <li className="flex items-center gap-3 text-gray-200 font-geist">
                   <Icon icon="mdi:check-circle" className="w-5 h-5 text-purple-500 shrink-0" />
-                  <span>Premium Handshake Proxy</span>
+                  <span>Premium Handshake Proxies</span>
                 </li>
               </ul>
 

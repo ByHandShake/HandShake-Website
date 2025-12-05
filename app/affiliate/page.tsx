@@ -58,7 +58,7 @@ const benefits = [
   {
     icon: 'solar:infinity-bold-duotone',
     title: 'Unlimited Earnings',
-    description: 'There\'s no cap. Refer 10 customers, earn $500. Refer 100, earn $5,000. Simple math.',
+    description: 'There\'s no cap. Refer 10 customers, earn up to $5000. Refer 100, earn $50,000. Simple math.',
   },
   {
     icon: 'solar:clock-circle-bold-duotone',
@@ -210,7 +210,7 @@ export default function AffiliatePage() {
                       </div>
                       <div className="text-lg text-gray-400 font-geist">monthly recurring</div>
                       <div className="mt-4 pt-4 border-t border-white/10">
-                        <div className="text-sm text-gray-500 font-geist">10 customers = <span className="text-blue-400 font-semibold">passive income</span></div>
+                        <div className="text-sm text-gray-500 font-geist">10 customers = <span className="text-blue-400 font-semibold">Up to $5000</span></div>
                       </div>
                     </div>
                   </div>

@@ -16,27 +16,11 @@ const features = [
   {
     category: 'Core Features',
     items: [
-      { name: 'Premium Handshake Proxy', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Analytics', solo: 'Basic', growth: 'Advanced', business: 'Advanced', agency: 'Advanced', scale: 'Advanced', infinity: 'Advanced' },
-      { name: 'Support', solo: 'Email', growth: 'Priority', business: 'Priority', agency: 'Priority', scale: 'Priority', infinity: 'Priority' },
-      { name: 'Campaign templates', solo: false, growth: true, business: true, agency: true, scale: true, infinity: true },
-      { name: 'A/B testing', solo: false, growth: false, business: true, agency: true, scale: true, infinity: true },
-      { name: 'Smart scheduling', solo: false, growth: false, business: false, agency: true, scale: true, infinity: true },
-      { name: 'Team collaboration tools', solo: false, growth: false, business: false, agency: false, scale: true, infinity: true },
-    ],
-  },
-  {
-    category: 'Enterprise',
-    items: [
-      { name: 'Enterprise security', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
-      { name: 'SSO & SAML', solo: false, growth: false, business: false, agency: false, scale: false, infinity: true },
-    ],
-  },
-  {
-    category: 'Coming Soon',
-    items: [
-      { name: 'Webhooks', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
-      { name: 'API', solo: 'Soon', growth: 'Soon', business: 'Soon', agency: 'Soon', scale: 'Soon', infinity: 'Soon' },
+      { name: 'Premium Handshake Proxies', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'Analytics', solo: 'Advanced', growth: 'Advanced', business: 'Advanced', agency: 'Advanced', scale: 'Advanced', infinity: 'Advanced' },
+      { name: 'Support', solo: 'Priority', growth: 'Priority', business: 'Priority', agency: 'Priority', scale: 'Priority', infinity: 'Priority' },
+      { name: 'Campaign templates', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
+      { name: 'A/B testing', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },
     ],
   },
 ]

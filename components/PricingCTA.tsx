@@ -37,7 +37,7 @@ export function PricingCTA() {
             </div>
             <div className="flex items-center gap-2">
               <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
-              <span>Dedicated IP included</span>
+              <span>Premium Handshake Proxies</span>
             </div>
           </div>
         </div>

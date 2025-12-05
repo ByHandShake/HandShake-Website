@@ -112,17 +112,6 @@ export function PricingFAQ() {
             </div>
           ))}
         </div>
-
-        <div className="mt-12 text-center [animation:fadeSlideIn_0.8s_ease-out_0.3s_both] animate-on-scroll">
-          <p className="text-gray-400 font-geist mb-4">Still have questions?</p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold font-geist transition-colors"
-          >
-            Contact our sales team
-            <Icon icon="mdi:arrow-right" className="w-4 h-4" />
-          </a>
-        </div>
       </div>
     </section>
   )

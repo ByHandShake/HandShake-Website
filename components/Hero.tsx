@@ -34,7 +34,7 @@ export function Hero() {
           </div>
           
           <p className="text-xs text-gray-500 mt-6 font-medium font-geist tracking-wide">
-            30-day money-back guarantee • Cancel anytime • Dedicated IP included
+            30-day money-back guarantee • Cancel anytime • Premium Handshake Proxies
           </p>
         </div>
       </div>

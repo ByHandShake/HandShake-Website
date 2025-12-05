@@ -83,14 +83,8 @@ export function Footer() {
             © 2024 Handshake Inc. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors text-gray-500">
-              <Icon icon="mdi:twitter" className="text-xl" />
-            </a>
-            <a href="#" className="hover:text-white transition-colors text-gray-500">
-              <Icon icon="mdi:github" className="text-xl" />
-            </a>
-            <a href="#" className="hover:text-white transition-colors text-gray-500">
-              <Icon icon="mdi:discord" className="text-xl" />
+            <a href="https://www.linkedin.com/company/byhandshake/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-gray-500">
+              <Icon icon="mdi:linkedin" className="text-xl" />
             </a>
           </div>
         </div>
