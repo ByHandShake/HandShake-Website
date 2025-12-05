@@ -14,6 +14,7 @@ const plans = [
     workspaces: 'Unlimited',
     unifiedInbox: true,
     premiumProxy: true,
+    incentive: '10+ meetings/month changes everything',
   },
   {
     name: 'Growth',
@@ -26,6 +27,7 @@ const plans = [
     unifiedInbox: true,
     premiumProxy: true,
     popular: true,
+    incentive: '20+ qualified meetings on autopilot',
   },
   {
     name: 'Business',
@@ -37,6 +39,7 @@ const plans = [
     workspaces: 'Unlimited',
     unifiedInbox: true,
     premiumProxy: true,
+    incentive: 'Built for consistent $50K+ months',
   },
   {
     name: 'Agency',
@@ -48,6 +51,7 @@ const plans = [
     workspaces: 'Unlimited',
     unifiedInbox: true,
     premiumProxy: true,
+    incentive: 'Real agency margins start here',
   },
 ]
 
@@ -141,6 +145,7 @@ export function PricingTable() {
               }`}>
                 Start Scaling
               </a>
+              <p className="text-xs text-gray-500 font-geist italic mt-3 text-center">"{plan.incentive}"</p>
             </div>
           ))}
         </div>
@@ -191,6 +196,7 @@ export function PricingTable() {
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Unified Inbox</div>
               <div className="px-6 flex items-center font-geist border-b py-4 h-[4rem] text-gray-400 border-white/5">Premium Handshake Proxy</div>
               <div className="h-24 px-6 flex items-center border-b border-white/5" />
+              <div className="h-12 px-6 flex items-center" />
             </div>
 
             {/* Plan Columns */}
@@ -238,6 +244,9 @@ export function PricingTable() {
                   }`}>
                     Start Scaling
                   </a>
+                </div>
+                <div className={`h-12 px-4 flex items-center justify-center ${plan.popular ? 'relative z-10' : ''}`}>
+                  <p className="text-[11px] text-gray-500 font-geist italic text-center">"{plan.incentive}"</p>
                 </div>
               </div>
             ))}
@@ -314,6 +323,7 @@ export function PricingTable() {
                 <span>Start Scaling</span>
                 <Icon icon="mdi:arrow-right" className="ml-2 transition-transform group-hover/btn:translate-x-1" />
               </a>
+              <p className="text-xs text-gray-500 font-geist italic mt-4 text-center">"For when $100K/month isn't enough"</p>
             </div>
           </div>
 
@@ -391,6 +401,7 @@ export function PricingTable() {
                 <span>Contact Sales</span>
                 <Icon icon="mdi:arrow-right" className="ml-2 transition-transform group-hover/btn:translate-x-1" />
               </button>
+              <p className="text-xs text-gray-400 font-geist italic mt-4 text-center">"No limits. No excuses. Just results."</p>
             </div>
           </div>
         </div>

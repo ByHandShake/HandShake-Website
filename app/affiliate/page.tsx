@@ -10,7 +10,7 @@ const faqs = [
   {
     question: 'How much do I earn per referral?',
     answer:
-      'You earn $50 for every paying customer you refer to Handshake. There\'s no cap on earnings—the more you refer, the more you make. Commissions are paid monthly.',
+      'You earn 30% of the monthly subscription for every paying customer you refer to Handshake—for as long as they stay a customer. There\'s no cap on earnings, and your income grows as your referrals stick around.',
   },
   {
     question: 'How do I track my referrals?',
@@ -52,8 +52,8 @@ const faqs = [
 const benefits = [
   {
     icon: 'solar:dollar-bold-duotone',
-    title: '$50 Per Sale',
-    description: 'Earn a flat $50 commission for every paying customer you refer. No complicated tier structures.',
+    title: '30% Recurring',
+    description: 'Earn 30% of every referred customer\'s monthly subscription—for life. Your income grows over time.',
   },
   {
     icon: 'solar:infinity-bold-duotone',
@@ -100,8 +100,8 @@ const steps = [
   },
   {
     number: '04',
-    title: 'Earn $50 Per Sale',
-    description: 'When someone signs up through your link and becomes a paying customer, you earn $50.',
+    title: 'Earn 30% Monthly',
+    description: 'When someone signs up through your link and becomes a paying customer, you earn 30% of their subscription every month.',
   },
 ]
 
@@ -145,17 +145,17 @@ export default function AffiliatePage() {
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight mb-4 sm:mb-6 leading-[1.1] font-jakarta font-medium px-2">
-                Earn <span className="text-blue-500">$50</span> for Every
+                Earn <span className="text-blue-500">30%</span> Monthly
                 <br className="hidden sm:block" />
-                Customer You Refer
+                For Every Customer You Refer
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-geist text-gray-400 px-4">
-                Join the Handshake affiliate program and get paid for spreading the word. No limits on earnings. No complicated tiers. Just cold hard cash.
+                Join the Handshake affiliate program and earn recurring commissions. Get 30% of every customer's subscription, every single month, for as long as they stay.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://app.byhandshake.com/affiliate" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
+                <a href="" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
                   Join the Program
                   <Icon icon="mdi:arrow-right" className="transition-transform group-hover:translate-x-1" />
                 </a>
@@ -165,7 +165,7 @@ export default function AffiliatePage() {
               </div>
 
               <p className="text-xs text-gray-500 mt-6 font-medium font-geist tracking-wide">
-                Free to join • No minimum followers • Get paid monthly
+                Free to join • No minimum followers • Recurring commissions
               </p>
             </div>
           </div>
@@ -185,12 +185,12 @@ export default function AffiliatePage() {
                       The Math is Simple
                     </h2>
                     <p className="text-base sm:text-lg text-gray-400 font-geist mb-6">
-                      You send traffic. They convert. You get paid. No complicated revenue shares or tier unlocking. Every single sale puts $50 in your pocket.
+                      You send traffic. They convert. You get paid—every single month. 30% of their subscription goes straight to you, for as long as they're a customer.
                     </p>
                     <div className="flex items-center gap-6 flex-wrap">
                       <div className="flex items-center gap-2">
                         <Icon icon="mdi:check-circle" className="w-5 h-5 text-blue-400" />
-                        <span className="text-sm text-gray-300 font-geist">Flat commission</span>
+                        <span className="text-sm text-gray-300 font-geist">Recurring revenue</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Icon icon="mdi:check-circle" className="w-5 h-5 text-blue-400" />
@@ -206,11 +206,11 @@ export default function AffiliatePage() {
                   <div className="flex justify-center lg:justify-end">
                     <div className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 text-center shadow-2xl">
                       <div className="text-6xl sm:text-7xl md:text-8xl font-bold text-white font-jakarta mb-2">
-                        $50
+                        30%
                       </div>
-                      <div className="text-lg text-gray-400 font-geist">per sale</div>
+                      <div className="text-lg text-gray-400 font-geist">monthly recurring</div>
                       <div className="mt-4 pt-4 border-t border-white/10">
-                        <div className="text-sm text-gray-500 font-geist">10 referrals = <span className="text-blue-400 font-semibold">$500</span></div>
+                        <div className="text-sm text-gray-500 font-geist">10 customers = <span className="text-blue-400 font-semibold">passive income</span></div>
                       </div>
                     </div>
                   </div>
@@ -445,7 +445,7 @@ export default function AffiliatePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                <a href="https://app.byhandshake.com/affiliate" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
+                <a href="https://handshake.tolt.io/login" className="inline-flex w-full sm:w-auto text-sm font-semibold rounded-full px-8 py-4 items-center justify-center gap-2 transition-all duration-300 text-white font-geist bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-800 shadow-[0_4px_15px_rgba(0,123,255,0.4)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.8)] hover:scale-[1.02] uppercase tracking-wide group">
                   Join the Affiliate Program
                   <Icon icon="mdi:arrow-right" className="transition-transform group-hover:translate-x-1" />
                 </a>
@@ -458,7 +458,7 @@ export default function AffiliatePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
-                  <span>$50 per sale</span>
+                  <span>30% recurring</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon icon="mdi:check-circle" className="w-4 h-4 text-blue-400" />
