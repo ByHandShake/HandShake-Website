@@ -1,19 +1,24 @@
 import type { NextConfig } from 'next'
 
+const securityHeaders = [
+  { key: 'X-DNS-Prefetch-Control', value: 'on' },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+]
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'hoirqrkdgbmvpwutwuwj.supabase.co',
-      },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'hoirqrkdgbmvpwutwuwj.supabase.co' },
     ],
+  },
+  async headers() {
+    return [
+      { source: '/(.*)', headers: securityHeaders },
+    ]
   },
 }
 
 export default nextConfig
-

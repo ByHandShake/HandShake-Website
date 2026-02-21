@@ -1,9 +1,15 @@
-'use client'
+import type { Metadata } from 'next'
 
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { LegalLayout } from '@/components/LegalLayout'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'How Handshake collects, uses, and protects your personal information.',
+  openGraph: { url: 'https://byhandshake.com/privacy' },
+}
 
 export default function PrivacyPage() {
   const sections = [

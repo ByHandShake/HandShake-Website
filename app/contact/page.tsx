@@ -1,37 +1,25 @@
-'use client'
-
-import { useEffect } from 'react'
+import type { Metadata } from 'next'
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { ContactHero } from '@/components/ContactHero'
 import { ContactForm } from '@/components/ContactForm'
 import { ContactMethods } from '@/components/ContactMethods'
+import { ScrollAnimationProvider } from '@/components/ScrollAnimationProvider'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    "Get in touch with the Handshake team. We'd love to hear from you — whether you have questions, feedback, or need support.",
+  openGraph: {
+    url: 'https://byhandshake.com/contact',
+  },
+}
 
 export default function ContactPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
-    )
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <>
+      <ScrollAnimationProvider />
       <BackgroundEffect />
       <Navbar />
       <main className="flex-grow">
@@ -43,4 +31,3 @@ export default function ContactPage() {
     </>
   )
 }
-

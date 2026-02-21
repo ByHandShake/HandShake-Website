@@ -1,6 +1,4 @@
-'use client'
-
-import { useEffect } from 'react'
+import type { Metadata } from 'next'
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -9,31 +7,21 @@ import { PricingPlans } from '@/components/PricingPlans'
 import { PricingComparison } from '@/components/PricingComparison'
 import { PricingFAQ } from '@/components/PricingFAQ'
 import { PricingCTA } from '@/components/PricingCTA'
+import { ScrollAnimationProvider } from '@/components/ScrollAnimationProvider'
+
+export const metadata: Metadata = {
+  title: 'Pricing',
+  description:
+    'Simple, transparent pricing for LinkedIn automation. Start with 1 sender at $69/mo, scale to unlimited. All plans include unlimited team seats and workspaces.',
+  openGraph: {
+    url: 'https://byhandshake.com/pricing',
+  },
+}
 
 export default function PricingPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
-    )
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <>
+      <ScrollAnimationProvider />
       <BackgroundEffect />
       <Navbar />
       <main className="flex-grow">
@@ -47,4 +35,3 @@ export default function PricingPage() {
     </>
   )
 }
-

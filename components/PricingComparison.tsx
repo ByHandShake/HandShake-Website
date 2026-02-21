@@ -7,7 +7,7 @@ const features = [
   {
     category: 'Accounts & Team',
     items: [
-      { name: 'LinkedIn sender accounts', solo: '2', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
+      { name: 'LinkedIn sender accounts', solo: '1', growth: '5', business: '10', agency: '20', scale: '50', infinity: 'Unlimited' },
       { name: 'Team Seats', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
       { name: 'Workspaces', solo: 'Unlimited', growth: 'Unlimited', business: 'Unlimited', agency: 'Unlimited', scale: 'Unlimited', infinity: 'Unlimited' },
       { name: 'Unified Inbox', solo: true, growth: true, business: true, agency: true, scale: true, infinity: true },

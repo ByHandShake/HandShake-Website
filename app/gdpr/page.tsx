@@ -1,9 +1,15 @@
-'use client'
+import type { Metadata } from 'next'
 
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { LegalLayout } from '@/components/LegalLayout'
+
+export const metadata: Metadata = {
+  title: 'GDPR Compliance',
+  description: 'How Handshake complies with the General Data Protection Regulation.',
+  openGraph: { url: 'https://byhandshake.com/gdpr' },
+}
 
 export default function GDPRPage() {
   const sections = [

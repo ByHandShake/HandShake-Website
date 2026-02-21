@@ -1,9 +1,15 @@
-'use client'
+import type { Metadata } from 'next'
 
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { LegalLayout } from '@/components/LegalLayout'
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy',
+  description: 'How Handshake uses cookies and similar tracking technologies.',
+  openGraph: { url: 'https://byhandshake.com/cookies' },
+}
 
 export default function CookiesPage() {
   const sections = [

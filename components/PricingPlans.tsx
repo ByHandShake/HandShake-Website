@@ -7,14 +7,14 @@ import { Icon } from '@iconify/react'
 const plans = [
   {
     name: 'Solo',
-    price: 99,
-    yearlyPrice: 79,
-    senders: '2',
+    price: 69,
+    yearlyPrice: 55,
+    senders: '1',
     tagline: 'Perfect for the individual founder',
     color: 'emerald',
     teamSeats: 'Unlimited',
     features: [
-      '2 LinkedIn sender accounts',
+      '1 LinkedIn sender account',
       'Unlimited team seats',
       'Unlimited workspaces',
       'Unified inbox',

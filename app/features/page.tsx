@@ -1,6 +1,4 @@
-'use client'
-
-import { useEffect } from 'react'
+import type { Metadata } from 'next'
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -10,31 +8,21 @@ import { CampaignFlowSection } from '@/components/CampaignFlowSection'
 import { FeaturesList } from '@/components/FeaturesList'
 import { FeaturesIntegrations } from '@/components/FeaturesIntegrations'
 import { PricingCTA } from '@/components/PricingCTA'
+import { ScrollAnimationProvider } from '@/components/ScrollAnimationProvider'
+
+export const metadata: Metadata = {
+  title: 'Features',
+  description:
+    'Multi-sender rotation, unlimited workspaces, unified inbox, and campaign workflows. Everything you need to scale LinkedIn outreach safely.',
+  openGraph: {
+    url: 'https://byhandshake.com/features',
+  },
+}
 
 export default function FeaturesPage() {
-  useEffect(() => {
-    // Initialize scroll animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
-    )
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <>
+      <ScrollAnimationProvider />
       <BackgroundEffect />
       <Navbar />
       <main className="flex-grow">
@@ -49,4 +37,3 @@ export default function FeaturesPage() {
     </>
   )
 }
-

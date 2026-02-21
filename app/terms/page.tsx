@@ -1,9 +1,15 @@
-'use client'
+import type { Metadata } from 'next'
 
 import { BackgroundEffect } from '@/components/BackgroundEffect'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { LegalLayout } from '@/components/LegalLayout'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms and conditions for using the Handshake LinkedIn automation platform.',
+  openGraph: { url: 'https://byhandshake.com/terms' },
+}
 
 export default function TermsPage() {
   const sections = [
